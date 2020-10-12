@@ -7,27 +7,27 @@ import org.junit.Test;
 public class FindMaximumTest {
 
 	@Test
-	public void givenMaxIntegerNumber_At1stPosition_ShouldReturnTheSameNumber() {
+	public void givenThreeStrings_At1stPosition_ShouldReturnTheSame() {
 		FindMaximum testMax=new FindMaximum();
-		Float a=79.0f, b=34.0f, c=65.7f;
-		Float maxFloat=testMax.findMaxFloat(a,b,c);
-		assertEquals(a,maxFloat);
+		String a="Zebra", b="Pour", c="Eggs";
+		String maxString=testMax.findMaxString(a,b,c);
+		assertEquals(a,maxString);
 	}
 	
 	@Test
-	public void givenMaxIntegerNumber_At2ndPosition_ShouldReturnTheSameNumber() {
+	public void givenThreeStrings_At2ndPosition_ShouldReturnTheSame() {
 		FindMaximum testMax=new FindMaximum();
-		Float a=23.7f, b=120.7f, c=48.4f;
-		Float maxFloat=testMax.findMaxFloat(a,b,c);
-		assertEquals(b,maxFloat);
+		String a="Grapes", b="Zebra", c="Cinema";
+		String maxString=testMax.findMaxString(a,b,c);
+		assertEquals(b,maxString);
 	}
 	
 	@Test
-	public void givenMaxIntegerNumber_At3rdPosition_ShouldReturnTheSameNumber() {
+	public void givenThreeStrings_At3rdPosition_ShouldReturnTheSame() {
 		FindMaximum testMax=new FindMaximum();
-		Float a=12.8f, b=39.7f, c=120.4f;
-		Float maxFloat=testMax.findMaxFloat(a,b,c);
-		assertEquals(c,maxFloat);
+		String a="Apple", b="Bat", c="Zebra";
+		String maxString=testMax.findMaxString(a,b,c);
+		assertEquals(c,maxString);
 	}
 
 }
