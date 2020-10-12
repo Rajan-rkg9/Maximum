@@ -1,40 +1,35 @@
 package com.CapG.Maximum;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class FindMaximum<T extends Comparable<T>> {
-	T n1, n2, n3;
-	public FindMaximum(T n1, T n2, T n3) {
+	List<T> inputs;
+	public FindMaximum(T... inputs) {
 		super();
-		this.n1 = n1;
-		this.n2 = n2;
-		this.n3 = n3;
+		this.inputs = Arrays.asList(inputs);
 	}
 	public T findMax()
 	{
-		return FindMaximum.findMax(n1, n2, n3);
+		return FindMaximum.findMax(inputs);
 	}
-	public static <T extends Comparable<T>> T findMax(T n1 , T n2 , T n3)
+	public static <T extends Comparable<T>> T findMax(List<T> inputs)
 	{
 		T max;
-		if(n1.compareTo(n2) > 0 &&  n1.compareTo(n3) >  0)
-			max = n1;
-		else if(n2.compareTo(n3) > 0)
-			max = n2;
-		else
-			max = n3;
+		List<T> sortedList = new ArrayList<>(inputs);
+		Collections.sort(sortedList);
+		max = sortedList.get(sortedList.size() - 1);
 		return max;
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter three integers:");
-		Integer In1 = sc.nextInt() , In2 = sc.nextInt() , In3 = sc.nextInt();
-		System.out.println("Enter three floating numbers:");
-		Float Fn1 = sc.nextFloat() , Fn2 = sc.nextFloat() , Fn3 = sc.nextFloat();
-		System.out.println("Enter three Strings:");
-		String Sn1 = sc.nextLine() , Sn2 = sc.nextLine() , Sn3 = sc.nextLine();
-		FindMaximum.findMax(In1, In2, In3);
-		FindMaximum.findMax(Fn1, Fn2, Fn3);
-		FindMaximum.findMax(Sn1, Sn2, Sn3);
+		System.out.println("Enter five integers:");
+		Integer In1 = sc.nextInt() , In2 = sc.nextInt() , In3 = sc.nextInt() ,In4 = sc.nextInt() ,In5 = sc.nextInt();
+		System.out.println("Enter  five floating numbers:");
+		Float Fn1 = sc.nextFloat() , Fn2 = sc.nextFloat() , Fn3 = sc.nextFloat() , Fn4 = sc.nextFloat() , Fn5 = sc.nextFloat();
+		System.out.println("Enter five Strings:");
+		String Sn1 = sc.nextLine() , Sn2 = sc.nextLine() , Sn3 = sc.nextLine() , Sn4 = sc.nextLine() , Sn5 = sc.nextLine();
+		new FindMaximum<Integer>(In1, In2, In3 , In4 , In5).findMax();
+		new FindMaximum<Float>(Fn1, Fn2, Fn3 , Fn4 , Fn5).findMax();
+		new FindMaximum<String>(Sn1 , Sn2 ,Sn3 ,Sn4 ,Sn5).findMax();
 	}
 }
