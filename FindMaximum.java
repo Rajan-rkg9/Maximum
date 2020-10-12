@@ -1,6 +1,6 @@
 package com.CapG.Maximum;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class FindMaximum<T extends Comparable<T>> {
 	T n1, n2, n3;
@@ -14,7 +14,7 @@ public class FindMaximum<T extends Comparable<T>> {
 	{
 		return FindMaximum.findMax(n1, n2, n3);
 	}
-	public static <T extends Comparable<T>> T findMax(T n1 , T n2 , T n3)
+	public static <T extends Comparable<T>> T findMax(T n1, T n2, T n3)
 	{
 		T max;
 		if(n1.compareTo(n2) > 0 &&  n1.compareTo(n3) >  0)
@@ -23,7 +23,11 @@ public class FindMaximum<T extends Comparable<T>> {
 			max = n2;
 		else
 			max = n3;
+		printMax(n1, n2, n3, max);
 		return max;
+	}
+	public static <T> void printMax(T n1, T n2, T n3 ,T max) {
+		System.out.println("The Maximum among " + n1 + ", " + n2 + ", " +"and " + n3 + " is : " + max  );
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
