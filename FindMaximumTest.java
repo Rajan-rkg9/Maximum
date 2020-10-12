@@ -77,27 +77,5 @@ public class FindMaximumTest {
 		assertEquals(c, maxString);
 	}
 	
-	@Test
-	public void givenMultipleIntegers_WithMaxIntegerNumber_At1stPosition_ShouldReturnTheSameNumber() {
-		Integer a = 256, b = 104, c = 13, d = 75, e = 87, f = 23;
-		FindMaximum<Integer> testMax = new FindMaximum<Integer>(a, b, c, d, e, f);
-		Integer maxInt = testMax.findMax();
-		assertEquals(a, maxInt);
-	}
-
-	@Test
-	public void givenMultipleFloatingNumbers_WithMaxFloatNumber_At2ndPosition_ShouldReturnTheSameNumber() {
-		Float a = 24.5f, b = 101.0f, c = 13.5f, d = 28.0f, e = 13.8f, f = 22.3f;
-		FindMaximum<Float> testMax = new FindMaximum<Float>(a, b, c, d, e, f);
-		Float maxFloat = testMax.findMax();
-		assertEquals(b, maxFloat);
-	}
-
-	@Test
-	public void givenMultipleStrings_WithMaxString_At4thPosition_ShouldReturnTheSameString() {
-		String a = "Peach", b = "Banana", c = "Apple", d = "Zebra", e = "Guava", f = "Orange";
-		FindMaximum<String> testMax = new FindMaximum<String>(a, b, c, d, e, f);
-		String maxString = testMax.findMax();
-		assertEquals(d, maxString);
-	}
+	
 }
