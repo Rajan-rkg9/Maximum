@@ -2,7 +2,18 @@ package com.CapG.Maximum;
 
 import java.util.Scanner;
 
-public class FindMaximum {
+public class FindMaximum<T extends Comparable<T>> {
+	T n1, n2, n3;
+	public FindMaximum(T n1, T n2, T n3) {
+		super();
+		this.n1 = n1;
+		this.n2 = n2;
+		this.n3 = n3;
+	}
+	public T findMax()
+	{
+		return FindMaximum.findMax(n1, n2, n3);
+	}
 	public static <T extends Comparable<T>> T findMax(T n1 , T n2 , T n3)
 	{
 		T max;
