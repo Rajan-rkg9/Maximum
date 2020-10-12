@@ -9,25 +9,25 @@ public class FindMaximumTest {
 	@Test
 	public void givenMaxIntegerNumber_At1stPosition_ShouldReturnTheSameNumber() {
 		FindMaximum testMax=new FindMaximum();
-		Integer a=79, b=34, c=65;
-		Integer maxInt=testMax.findMaxInteger(a,b,c);
-		assertEquals(a,maxInt);
+		Float a=79.0f, b=34.0f, c=65.7f;
+		Float maxFloat=testMax.findMaxFloat(a,b,c);
+		assertEquals(a,maxFloat);
 	}
 	
 	@Test
 	public void givenMaxIntegerNumber_At2ndPosition_ShouldReturnTheSameNumber() {
 		FindMaximum testMax=new FindMaximum();
-		Integer a=10, b=20, c=15;
-		Integer maxInt=testMax.findMaxInteger(a,b,c);
-		assertEquals(b,maxInt);
+		Float a=23.7f, b=120.7f, c=48.4f;
+		Float maxFloat=testMax.findMaxFloat(a,b,c);
+		assertEquals(b,maxFloat);
 	}
 	
 	@Test
 	public void givenMaxIntegerNumber_At3rdPosition_ShouldReturnTheSameNumber() {
 		FindMaximum testMax=new FindMaximum();
-		Integer a=10, b=15, c=20;
-		Integer maxInt=testMax.findMaxInteger(a,b,c);
-		assertEquals(c,maxInt);
+		Float a=12.8f, b=39.7f, c=120.4f;
+		Float maxFloat=testMax.findMaxFloat(a,b,c);
+		assertEquals(c,maxFloat);
 	}
 
 }
