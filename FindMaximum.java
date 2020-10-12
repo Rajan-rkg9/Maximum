@@ -3,9 +3,9 @@ package com.CapG.Maximum;
 import java.util.Scanner;
 
 public class FindMaximum {
-	public static Float findMaxFloat(Float n1 , Float n2 , Float n3)
+	public static <T extends Comparable<T>> T findMax(T n1 , T n2 , T n3)
 	{
-		Float max;
+		T max;
 		if(n1.compareTo(n2) > 0 &&  n1.compareTo(n3) >  0)
 			max = n1;
 		else if(n2.compareTo(n3) > 0)
@@ -16,8 +16,14 @@ public class FindMaximum {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter three integers:");
+		Integer In1 = sc.nextInt() , In2 = sc.nextInt() , In3 = sc.nextInt();
 		System.out.println("Enter three floating numbers:");
-		Float n1 = sc.nextFloat() , n2 = sc.nextFloat() , n3 = sc.nextFloat();
-		FindMaximum.findMaxFloat(n1, n2, n3);
+		Float Fn1 = sc.nextFloat() , Fn2 = sc.nextFloat() , Fn3 = sc.nextFloat();
+		System.out.println("Enter three Strings:");
+		String Sn1 = sc.nextLine() , Sn2 = sc.nextLine() , Sn3 = sc.nextLine();
+		FindMaximum.findMax(In1, In2, In3);
+		FindMaximum.findMax(Fn1, Fn2, Fn3);
+		FindMaximum.findMax(Sn1, Sn2, Sn3);
 	}
 }
