@@ -33,8 +33,8 @@ public class FindMaximum<T extends Comparable<T>> {
 		Float Fn1 = sc.nextFloat() , Fn2 = sc.nextFloat() , Fn3 = sc.nextFloat();
 		System.out.println("Enter three Strings:");
 		String Sn1 = sc.nextLine() , Sn2 = sc.nextLine() , Sn3 = sc.nextLine();
-		FindMaximum.findMax(In1, In2, In3);
-		FindMaximum.findMax(Fn1, Fn2, Fn3);
-		FindMaximum.findMax(Sn1, Sn2, Sn3);
+		new FindMaximum<Integer>(In1, In2, In3).findMax();
+		new FindMaximum<Float>(Fn1, Fn2, Fn3).findMax();
+		new FindMaximum<String>(Sn1, Sn2, Sn3).findMax();
 	}
 }
